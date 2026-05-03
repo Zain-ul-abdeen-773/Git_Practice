@@ -1,0 +1,14 @@
+name: Second Workflow test by Zain
+run-name: ${{ github.actor}} has triggeed this workflow using ${{ github.event}} on ${{ github.repository}} and on branch ${{ github.ref_name}}.
+on: [push,pull_request,workflow_dispatch]
+jobs: 
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking out repository
+        uses: actions/checkout@v4
+      - name: Printing a file
+        uses: cat firstfile.txt
+  second-job:
+      - name: Echo a greetings message
+        uses: echo "Welcome to the hell of Devops"
