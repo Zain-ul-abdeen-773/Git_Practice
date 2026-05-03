@@ -8,7 +8,9 @@ jobs:
       - name: checking out repository
         uses: actions/checkout@v4
       - name: Printing a file
-        uses: cat firstfile.txt
+        run: cat firstfile.txt
   second-job:
+    runs-on: ubuntu-latest
+    steps:
       - name: Echo a greetings message
-        uses: echo "Welcome to the hell of Devops"
+        run: echo "Welcome to the hell of Devops"
